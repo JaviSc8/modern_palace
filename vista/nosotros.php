@@ -46,8 +46,8 @@
                   <a class="dropdown-item" href="#">Atenas</a>
                   <a class="dropdown-item" href="#">París</a>
                 </div>
-            <li class="nav-item active"><a class="nav-link" href="eventos.php">EVENTOS</a></li>
-            <li class="nav-item"><a class="nav-link" href="nosotros.php">NOSOTROS</a></li>
+            <li class="nav-item"><a class="nav-link" href="eventos.php">EVENTOS</a></li>
+            <li class="nav-item active"><a class="nav-link" href="nosotros.php">NOSOTROS</a></li>
             <li class="nav-item"><a class="nav-link" href="#enlaces">ESPACIO 4</a></li>
           </ul>
               <ul class="navbar-nav">
@@ -85,59 +85,47 @@
     <img id="fondo" src="../imagenes/fondo.jpg" alt="imagen arena blanca">
     <div id="cuerpo">
       <hr>
-      <h1>Imagina el evento</h1>
-      <h2>Nosotros lo haremos posible</h2>
-      <hr>
-      <!-- Video -->
-      <div class="embed-responsive embed-responsive-21by9">
-      <video class="embed-responsive-item" autoplay loop muted>
-      <source src="../imagenes/eventos/Hotel.mp4" type="video/mp4"></source>
-      Tu navegador no admite el elemento <code>video</code></video>
-      </div>
-      <!--<video id="video" autoplay loop muted poster="">
-        <source src="../imagenes/eventos/Hotel.mp4" type="video/mp4"></source>
-        Tu navegador no admite el elemento <code>video</code>
-      </video>-->
-      <!-- contenedor fluido bootstrap para el ancho de la página -->
-        <!--<div class="container-fluid">
-          <div id="contenido_video">
-              <h1>Celebra tu evento con nosotros</h1>
-              <h2>Congresos de empresa, bodas, bautizos, o simplemente una reunión especial</h2>
-          </div>-->
-          <hr>
           <!-- contenedor fluido bootstrap para el ancho de la página -->
           <div class="container-fluid">
-            <div id="contenidoEventos">
+            <div id="contenidoNosotros">
             <!-- Apartado 1 -->
             <div class="row">
-              <div class="col-md-6 col-sm-6">
-                <h3>Celebraciones de todo tipo</h3>
-                <p>Tanto si eres un particular como una empresa, En Modern Palace nos encargamos de diseñar a medida tu evento.</p>
-                <p>Congresos, reuniones, bodas, bautizos, comuniones, cumpleaños o incluso una celebración especial porque te apetece.</p>
-                <p>Tu nos indicas que quieres y nosotros lo hacemos posible:</p>
-                <ul>
-                  <li>Eventos de hasta 200 personas</li>
-                  <li>Servicios de catering propios</li>
-                  <li>Diseñamos tu evento de forma personalizada</li>
-                </ul>
+              <div class="col-md-8 col-sm-6">
+                <h3>Un poco de historia...</h3>
+                <p>Modern Palace Hoteles inició su andadura por el año 1.995, cuando la familia Mendoza ultimó la compra de su primer edificio en Málaga,
+                  el Modern Palace Málaga, lugar de referencia para muchos malagueños desde entonces.
+                Aunque todos los inicios son duros y complejos, el inmueble obtuvo rapidamente fama entre el turismo nacional e internacional por su buen servicio,
+                su buena ubicación y la calidad del alojamiento.</p>
+                <p>Tras años de bonanza, en 2.001 se produjó el salto internacional con la adquisición del terreno del futuro hotel de Atenas.
+                La familia quisó que el hotel fuera idéntico al que disponían en Málaga, ya que no querían que se perdiera su esencia y su forma de trabajar,
+                algo que ha sido recurrente en todos sus hoteles posteriores.</p>
+                <p>Actualmente, Modern Palace, dispone de 4 hoteles, situados en ubicaciones privilegiadas de Roma, París, Atenas y Málaga.</p>
+                <p>En la fotografía de la derecha puede verse la fachada del Modern Palace Hotel de Málaga en 2.010.</p>
+
               </div>
-                <img class="col-md-6 col-sm-6" src="../imagenes/eventos/catering.jpg" alt="mesa de catering al aire libre">
+                <img class="col-md-4 col-sm-4" src="../imagenes/nosotros/hotel.jpg" alt="fachada hotel Málaga">
             </div>
             <hr>
             <!-- Apartado 2 -->
             <div class="row">
-              <img class="col-md-6 order-md-1 col-12 order-2" src="../imagenes/eventos/conferencias.jpg" alt="Sala de reuniones">
-              <div class="col-md-6 order-md-2 col-12 order-1">
-                <h3>Entornos inolvidables</h3>
-                <p>Cualquiera de nuestros hoteles dispone de varias salas de conferencias, salón para celebraciones con un aforo máximo
-                  de 200 personas y posibilidad de realizar eventos al aire libre según temporada.</p>
-                <p>Para solicitar presupuestos, por favor contacta con nosotros al número de reservas de nuestra sede en Málaga,
-                <a href="tel:+34952004417">(+34) 952 00 44 17 </a> o al correo eléctronico <a href="mailto:eventos@modernpalace.com"> eventos@modernpalace.com</a></p>
-                <ul>
-                  <li>Salas de conferencias</li>
-                  <li>Salones multiusos</li>
-                  <li>Jardín habilitado para eventos al aire libre (según temporada)</li>
-                </ul>
+              <img class="col-md-5 order-md-1 col-12 order-2" src="../imagenes/nosotros/trabajo.jpg" alt="Apretón de manos, trabajo">
+              <div class="col-md-7 order-md-2 col-12 order-1">
+                <h3>Trabaja con nosotros</h3>
+                <p>Modern Palace cuenta con una amplía plantilla de trabajadores y siempre estamos en busca de nuevos talentos:
+                  <ul>
+                    <li>Personal de limpieza y mantenimiento</li>
+                    <li>Camareros/as</li>
+                    <li>Cocineros/as</li>
+                    <li>Ayudantes de cocina</li>
+                    <li>Recepcionistas</li>
+                    <li>Planificador/a de eventos</li>
+                  </ul>
+                <p>Si deseas trabajar con nosotros, por favor contacta al número de nuestra sede en Málaga, <a href="tel:+34952004417">(+34) 952 00 44 17 </a>
+                   o al correo eléctronico <a href="mailto:rrhh@modernpalace.com"> rrhh@modernpalace.com.</a></p>
+                   <ul>
+                     <li><a href="tel:+34952004417">(+34) 952 00 44 17 </a></li>
+                     <li><a href="mailto:rrhh@modernpalace.com"> rrhh@modernpalace.com</a></li>
+                   </ul>
               </div>
             </div>
             </div>

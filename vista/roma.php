@@ -54,7 +54,7 @@
                 <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">HOTELES</a>
                   <div class="dropdown-menu">
                     <a class="dropdown-item" href="malaga.php">Málaga</a>
-                    <a class="dropdown-item" href="#">Roma</a>
+                    <a class="dropdown-item" href="roma.php">Roma</a>
                     <a class="dropdown-item" href="#">Atenas</a>
                     <a class="dropdown-item" href="#">París</a>
                   </div>
@@ -108,31 +108,31 @@
         <!--slideshow-->
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img class="d-block w-100" src="../imagenes/malaga/malaga1.jpg" alt="Fotografía Málaga 1">
+            <img class="d-block w-100" src="../imagenes/roma/roma1.jpg" alt="Fotografía roma coliseo">
             <div class="carousel-caption d-md-block">
-              <h1>Disfruta de Málaga</h1>
-              <h2>Siente sus calles centenarias</h2>
+              <h1></h1>
+              <h2></h2>
             </div>
           </div>
           <div class="carousel-item">
-            <img class="d-block w-100" src="../imagenes/malaga/malaga2.jpg" alt="Fotografía espetos/sardinas">
+            <img class="d-block w-100" src="../imagenes/roma/.jpg" alt="Fotografía">
             <div class="carousel-caption d-md-block">
-              <h1>Vive Málaga</h1>
-              <h2>Deleitate con su gastronomía</h2>
+              <h1></h1>
+              <h2></h2>
             </div>
           </div>
           <div class="carousel-item">
-            <img class="d-block w-100" src="../imagenes/malaga/catedral2.jpg" alt="Fotografía catedral de Málaga">
+            <img class="d-block w-100" src="../imagenes/roma/.jpg" alt="Fotografía">
             <div class="carousel-caption d-md-block">
-              <h1>Observa Málaga</h1>
-              <h2>Admira su arquitectura</h2>
+              <h1></h1>
+              <h2></h2>
             </div>
           </div>
           <div class="carousel-item">
-            <img class="d-block w-100" src="../imagenes/malaga/mar.jpg" alt="Fotografía del mar en Málaga">
+            <img class="d-block w-100" src="../imagenes/roma/.jpg" alt="Fotografía">
             <div class="carousel-caption d-md-block">
-              <h1>Sumergete en Málaga</h1>
-              <h2>Vive el mar en todo su esplendor</h2>
+              <h1></h1>
+              <h2></h2>
             </div>
           </div>
         </div>
@@ -150,14 +150,12 @@
       <!-- contenedor fluido bootstrap para toda la página -->
       <div class="container-fluid">
         <div class="">
-          <h3 class="text-center">Modern Palace Málaga</h3>
+          <h3 class="text-center">Modern Palace Roma</h3>
           <hr>
           <div class="row">
             <div class="col-6 col-md-3">
-              <h4 class="text-center">Málaga la bella  <img class="enlacesBlack" src="../imagenes/mundo.png" alt="Icono mundo"></h4>
-              <p>Disfruta de la vida en Málaga, la capital de la costa del Sol. Visita sus museos y sus actividades culturales, tomate algo en sitios
-                emblemáticos o simplemente relajate en la playa. Nuestro hotel se encuentra cerca de calle Larios, la calle principal del casco histórico por lo que tendrás acceso rápido a los lugares
-                más importantes que visitar y a gran cantidad de medios de transporte públicos que te llevaran a donde necesites.</p>
+              <h4 class="text-center">Roma eterna  <img class="enlacesBlack" src="../imagenes/mundo.png" alt="Icono mundo"></h4>
+              <p></p>
             </div>
             <div class="col-6 col-md-3">
               <h4 class="text-center">Equipamiento Hotel <img class="enlacesBlack" src="../imagenes/hotel.png" alt="Icono hotel"></h4>
@@ -192,7 +190,7 @@
           <h4>Habitación 1:</h4>
           <form action="../controlador/control.php" method="post">
             <!--Elemento oculto para el destino "Málaga"-->
-            <input type="hidden" id="ciudad" name="destino" value="Malaga">
+            <input type="hidden" id="ciudad" name="destino" value="Roma">
             <div class="form-row justify-content-center">
               <div class="col-md-2 col-sm-6">
                 <label for="fecha_entrada">Fecha de entrada</label><br>
@@ -286,7 +284,7 @@
     </div>
   <hr>
     <!-- openstreetmap -->
-  <div id="Malaga" class="map">
+  <div id="Roma" class="map">
   </div>
     <hr>
     <!-- Pie de página con enlaces, información adicional, etc. -->

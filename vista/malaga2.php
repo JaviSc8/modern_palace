@@ -1,6 +1,8 @@
 <?php
 //Declaramos el uso de cookies:
   include '../modelo/cookies.php';
+  //Declaramos el uso de las funciones de error:
+  include '../controlador/error.php';
   //Declaramos el inicio de sesión del usuario:
     session_start();
   //Si la cookie está definida, utilizamos su información:
@@ -53,19 +55,24 @@
                     <a class="dropdown-item" href="#">París</a>
                   </div>
               <li class="nav-item"><a class="nav-link" href="eventos.php">EVENTOS</a></li>
-              <li class="nav-item"><a class="nav-link" href="#enlaces">NOSOTROS</a></li>
+              <li class="nav-item"><a class="nav-link" href="nosotros.php">NOSOTROS</a></li>
               <li class="nav-item"><a class="nav-link" href="#enlaces">ESPACIO 4</a></li>
             </ul>
               <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link" href="tel:+34990004417">(+34) 990 00 44 17 </a></li>
+                <li class="nav-item"><a class="nav-link" href="tel:+34952004417">(+34) 952 00 44 17 </a></li>
                 <li class="nav-item"><a class="nav-link" href="mailto:info@modernpalace.com"> info@modernpalace.com</a></li>
               </ul>
             </div>
             <ul class="navbar-nav navbar-expand">
               <li class="nav-item"><a class="nav-link active" href=
                 <?php
+                //Si existe la cookie con los datos del usuario se reenvia al controlador para que recupere la sesión y redirija a sesion.php:
                 if(isset($_COOKIE["datos"])){
                   echo "../controlador/control.php?rec=true";
+                  //Si el usuario ya se ha logado redirige a su sesión hasta que se cierre el navegador:
+                }elseif (isset($_SESSION["usuario"])){
+                  echo "../vista/sesion.php?user=ok";
+                  //En caso contrario se vuelve al login (Acceder.php):
                 }else {
                   echo "../vista/acceder.php";
                 }
@@ -83,7 +90,7 @@
     </nav>
     </header>
     <!--Fondo de la web-->
-    <!--<img id="fondo" src="../imagenes/fondo.jpg" alt="fondo paisaje">-->
+    <img id="fondo" src="../imagenes/fondo.jpg" alt="imagen arena blanca">
     <div id="cuerpo">
         <!--carrusel de fotografías del destino con bootstrap-->
         <div id="carousel" class="carousel slide mx-auto" data-ride="carousel" data-interval="6000">
@@ -104,22 +111,22 @@
             </div>
           </div>
           <div class="carousel-item">
-            <img class="d-block w-100" src="../imagenes/malaga/malaga2.jpg" alt="Fotografía Málaga 2">
-            <div class="carousel-caption d-none d-md-block mx-auto">
+            <img class="d-block w-100" src="../imagenes/malaga/malaga2.jpg" alt="Fotografía espetos/sardinas">
+            <div class="carousel-caption d-md-block">
               <h1>Vive Málaga</h1>
-              <h2>Contempla su atardecer</h2>
+              <h2>Deleitate con su gastronomía</h2>
             </div>
           </div>
           <div class="carousel-item">
             <img class="d-block w-100" src="../imagenes/malaga/catedral2.jpg" alt="Fotografía catedral de Málaga">
-            <div class="carousel-caption d-none d-md-block">
+            <div class="carousel-caption d-md-block">
               <h1>Observa Málaga</h1>
               <h2>Admira su arquitectura</h2>
             </div>
           </div>
           <div class="carousel-item">
             <img class="d-block w-100" src="../imagenes/malaga/mar.jpg" alt="Fotografía del mar en Málaga">
-            <div class="carousel-caption d-none d-md-block">
+            <div class="carousel-caption d-md-block">
               <h1>Sumergete en Málaga</h1>
               <h2>Vive el mar en todo su esplendor</h2>
             </div>
@@ -138,8 +145,42 @@
         <hr>
       <!-- contenedor fluido bootstrap para toda la página -->
       <div class="container-fluid">
-        <!--Div que recoge los datos del tiempo del script tiempo.js-->
-        <div id="datos" class="destacar">
+        <div class="">
+          <h3 class="text-center mb-4">Modern Palace Málaga</h3>
+          <div class="row">
+            <div class="col-6 col-md-3">
+              <h4 class="text-center">Málaga la bella  <img class="enlacesBlack" src="../imagenes/mundo.png" alt="Icono mundo"></h4>
+              <p>Disfruta de la vida en Málaga, la capital de la costa del Sol. Visita sus museos y sus actividades culturales, tomate algo en sitios
+                emblemáticos o simplemente relajate en la playa. Nuestro hotel se encuentra cerca de calle Larios, la calle principal del casco histórico por lo que tendrás acceso rápido a los lugares
+                más importantes que visitar y a gran cantidad de medios de transporte públicos que te llevaran a donde necesites.</p>
+            </div>
+            <div class="col-6 col-md-3">
+              <h4 class="text-center">Equipamiento Hotel <img class="enlacesBlack" src="../imagenes/hotel.png" alt="Icono hotel"></h4>
+              <p>Nuestro hotel dispone de:</p>
+                <ul>
+                  <li>Habitaciones simples y dobles</li>
+                  <li>Terraza-bar chill-out</li>
+                  <li>Restaurante buffet</li>
+                  <li>Aparcamiento</li>
+                  <li>Wifi</li>
+                </ul>
+            </div>
+            <div class="col-6 col-md-3">
+            <h4 class="text-center">Equipamiento Habitación <img class="enlacesBlack" src="../imagenes/habitacion.png" alt="Icono habitacion"></h3>
+            <p>Todas nuestras habitaciones disponen de:</p>
+             <ul>
+               <li>Baños individuales con duchas hidromasaje</li>
+               <li>Caja fuerte</li>
+               <li>TV 32"</li>
+               <li>Escritorio</li>
+               <li>Zonas relax con sofa y terraza</li>
+             </ul>
+             </div>
+            <!--Div que recoge los datos del tiempo del script tiempo.js-->
+            <div id="datos" class="col-6 col-md-3">
+              <h4>Tiempo hoy <img class="enlacesBlack" src="../imagenes/temp.png" alt="Icono termómetro/temperatura"></h4>
+            </div>
+          </div>
         </div>
         <hr>
         <div class="destacar">
@@ -148,109 +189,154 @@
             <!--Elemento oculto para el destino "Málaga"-->
             <input type="hidden" id="ciudad" name="destino2" value="Malaga">
             <div class="form-row justify-content-center">
-              <div class="col-2">
+              <div class="col-md-2 col-sm-6">
                 <label for="fecha_entrada">Fecha de entrada</label><br>
-                <input type="date" class="form-control" name="fecha_entrada" min=<?php echo date("Y-m-d"); ?> required
-                value=<?php //Para mostrar la selección hecha previamente:
+                <input type="date" class="form-control date1" name="fecha_entrada" min=<?php echo date("Y-m-d"); ?> required
+                value=<?php
+                //Para mostrar la selección hecha previamente:
                 if(isset($_COOKIE['reserva'])) {
-                  echo $a["Fecha entrada"]." readonly";
+                  echo $a["Entrada"]." readonly";
                 }
                 ?>>
               </div>
-              <div class="col-2">
+              <div class="col-md-2 col-sm-6">
                 <label for="fecha_salida">Fecha de salida</label><br>
-                <input type="date" class="form-control" name="fecha_salida" min=<?php echo date("Y-m-d"); ?> required
-                value=<?php //Para mostrar la selección hecha previamente:
+                <input type="date" class="form-control date2" name="fecha_salida" required
+                value=<?php
+                //Para mostrar la selección hecha previamente:
                 if(isset($_COOKIE['reserva'])) {
-                  echo $a["Fecha salida"]." readonly";
+                  echo $a["Salida"]." readonly";
                 }
                 ?>>
               </div>
-              <div class="col-2">
+              <div class="col-md-2 col-sm-6">
                 <label for="adultos">Nº Adultos por Hab.</label>
-                <select class="form-control" name="adultos">
+                <select class="form-control" id="adultos" name="adultos">
                   <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
+                  <option class="option" value="2">2</option>
+                  <option class="option" value="3">3</option>
                 </select>
               </div>
-              <div class="col-2 align-self-end">
+              <div class="col-md-2 col-sm-6 mt-3 align-self-end">
                 <input type="submit" id="solicitar_precio" class="btn btn-primary" value="Continuar">
             </div>
           </div>
+          <?php falloHabitacion(); ?>
         <hr>
       <div class="row">
         <!--Fotografía de habitación-->
-        <img class="habitaciones col-3" src="../imagenes/habitaciones/habitacionsimple.jpg" alt="habitacion simple">
-        <div class="col-9">
+        <img class="habitaciones col-md-3 col-sm-6" src="../imagenes/habitaciones/habitacionsimple.jpg" alt="habitacion simple">
+        <div class="col-md-9 col-sm-6">
         <h4>Habitación Simple</h4>
           <p>Habitaciones simples, tranquilas y funcionales ubicadas en un entorno acogedor, equipadas y diseñadas para garantizar el máximo confort.
-            Tamaño de la habitación: <strong>20m2 aproximadamente</strong></p>
-            <fieldset class="form-group">
+            <br>
+            - Tamaño de la habitación: <strong>20m2 aprox.</strong>
+            <br>
+            - Ocupación máxima: <strong>1 adulto/hab.*</strong></p>
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="regimen" id="Radios1" value="simpleDesayuno">
+                <input class="form-check-input simple" type="radio" name="regimen" id="Radios1" value="simpleDesayuno">
                 <label class="form-check-label" for="Radios1">
-                  Alojamiento con Desayuno Buffet incluido
+                  Alojamiento con Desayuno Buffet incluido. <strong>Precio por noche: 50 €*</strong>
                 </label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="regimen" id="Radios2" value="simpleMedia">
+                <input class="form-check-input simple" type="radio" name="regimen" id="Radios2" value="simpleMedia">
                 <label class="form-check-label" for="Radios2">
-                  Alojamiento en régimen de Media Pensión (Desayuno y Cena Buffet)
+                  Alojamiento en régimen de Media Pensión (Desayuno y Cena Buffet). <strong>Precio por noche: 80 €*</strong>
                 </label>
               </div>
-            </fieldset>
         </div>
       </div>
       <hr>
       <div class="row">
         <!--Fotografía de habitación-->
-        <img class="habitaciones col-3" src="../imagenes/habitaciones/habitaciondoble.jpg" alt="habitacion doble">
-        <div class="col-9">
+        <img class="habitaciones col-md-3 col-sm-6" src="../imagenes/habitaciones/habitaciondoble.jpg" alt="habitacion doble">
+        <div class="col-md-9 col-sm-6">
         <h4>Habitación Doble</h4>
           <p>Habitaciones dobles, tranquilas y funcionales para disfrutar en la mejor compañia, equipadas y diseñadas para garantizar el máximo confort.
-            Tamaño de la habitación: <strong>30m2 aproximadamente</strong></p>
+            <br>
+            - Tamaño de la habitación: <strong>30m2 aprox.</strong>
+            <br>
+            - Ocupación máxima: <strong>3 adultos/hab.*</strong></p>
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="regimen" id="Radios3" value="dobleDesayuno" checked>
+              <input class="form-check-input doble" type="radio" name="regimen" id="Radios3" value="dobleDesayuno" checked>
               <label class="form-check-label" for="Radios3">
-                Alojamiento con Desayuno Buffet incluido
+                Alojamiento con Desayuno Buffet incluido. <strong>Precio por noche: 120 €*</strong>
               </label>
             </div>
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="regimen" id="Radios4" value="dobleMedia">
+              <input class="form-check-input doble" type="radio" name="regimen" id="Radios4" value="dobleMedia">
               <label class="form-check-label" for="Radios4">
-                Alojamiento en régimen de Media Pensión (Desayuno y Cena Buffet)
+                Alojamiento en régimen de Media Pensión (Desayuno y Cena Buffet). <strong>Precio por noche: 180 €*</strong>
               </label>
             </div>
         </div>
       </div>
     </form>
+    <hr>
+    <p class="aclaracion">* Ocupación: 1 Niño/a de hasta 14 años sin coste adicional en habitación simple y 2 niños/as en habitación doble (sofa/cama supletoria/s disponibles).
+    <br>* Precio: En temporada alta (Junio a Agosto, ambos inclusive), el precio se verá incrementado 20 € por noche.</p>
     </div>
     <hr>
     <!-- Google Maps -->
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d102341.80869077441!2d-4.519306960919692!3d36.71820148344484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd7259c44fdb212d%3A0x6025dc92c9ca32cf!2zTcOhbGFnYQ!5e0!3m2!1ses!2ses!4v1585388775690!5m2!1ses!2ses"
     width="100%" height="450" frameborder="0" style="border:0; border-radius: 15px;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
     <hr>
-     <!-- Pie de página con políticas de privacidad, etc. -->
-     <footer>
-       <div id = "pie" class="jumbotron">
-         <div class="row">
-           <img class="col-2 enlaces" src="../imagenes/logo.png" alt="logotipo de modernpalace" id="logopie">
-           <a class="col enlaceTexto" href="#">Aviso legal, privacidad y cookies</a>
-           <a class="col enlaceTexto" href="#">ModernPalace.com</a>
-         </div>
-       </div>
-     </div>
-     </footer>
+    <!-- Pie de página con enlaces, información adicional, etc. -->
+    <footer>
+      <div id = "pie">
+        <div class="row m-4 p-3 align-items-start">
+            <a class="col-md-2 col-8 d-block w-100 m-auto order-md-1 order-2" href="#cuerpo"><img src="../imagenes/logo.png" id="logopie" alt="logotipo de modernpalace"></a>
+            <div class="col-md-3 col-12 mt-2 order-md-2 order-1">
+              <h4 class="ml-4">Modern Palace Hoteles</h4>
+              <ul class="listadosPie">
+                <li>Av. Puerta del sol, 15</li>
+                <li>29602 Marbella</li>
+                <li>Málaga</li>
+                <li><a href="tel:+34990004417">(+34) 952 00 44 17 </a></li>
+                <li><a href="mailto:info@modernpalace.com"> info@modernpalace.com</a></li>
+                <li>Todos los derechos reservados</li>
+              </ul>
+            </div>
+          <div class="col-md-2 d-none d-md-block mt-2 order-md-3">
+            <h4 class="ml-4">Alojamientos</h4>
+            <ul class="listadosPie">
+              <li><a href="../vista/malaga.php">Málaga</a></li>
+              <li><a href="../vista/roma.php">Roma</a></li>
+              <li><a href="../vista/atenas.php">Atenas</a></li>
+              <li><a href="../vista/paris.php">París</a></li>
+            </ul>
+          </div>
+          <div class="col-md-2 d-none d-md-block mt-2 order-md-4">
+            <h4 class="ml-4">Compañia</h4>
+            <ul class="listadosPie">
+              <li><a href="../vista/nosotros.php">Nosotros</a></li>
+              <li><a href="../vista/eventos.php">Eventos</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3 d-none d-md-block mt-2 order-md-5">
+            <h4 class="ml-4">Síguenos</h4>
+            <ul class="listadosPie">
+              <li class="zoom"><a href="https://es-es.facebook.com/"><img class="enlacesBlack" src="../imagenes/facebookBlack.png" alt="link facebook"></a></li>
+              <li class="zoom"><a href="https://www.instagram.com/"><img class="enlacesBlack" src="../imagenes/instagramBlack.png" alt="link instagram"></a></li>
+              <li class="zoom"><a href="https://twitter.com/"><img class="enlacesBlack" src="../imagenes/twitterBlack.png" alt="link twitter"></a></li>
+              <li class="zoom"><a href="https://es.linkedin.com/"><img class="enlacesBlack" src="../imagenes/linkedinBlack.png" alt="link linkedin"></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
      </div>
    </div>
    <!-- Declaraciones opcionales relacionadas con Bootstrap -->
    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+   <!--<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>-->
    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
    <!-- Declaraciones javascript propias -->
-   <script src="js/jQuery.js" type="text/javascript"></script>
+   <!-- Declaraciones javascript propias -->
+   <script src="../js/jQuery.js" type="text/javascript"></script>
    <script src="../js/tiempo.js" type="text/javascript"></script>
   </body>
 </html>

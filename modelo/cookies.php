@@ -46,8 +46,8 @@ class cookies
       }
       //Añadimos nuevos datos a la variable de la cookie:
       $this->reserva["Destino"] = $_POST["destino"];
-      $this->reserva["Fecha entrada"] = $_POST["fecha_entrada"];
-      $this->reserva["Fecha salida"] = $_POST["fecha_salida"];
+      $this->reserva["Entrada"] = $_POST["fecha_entrada"];
+      $this->reserva["Salida"] = $_POST["fecha_salida"];
       $this->reserva["Adultos"] = $_POST["adultos"];
       $this->reserva["Tipo"] = $this->tipoHab;
       $this->reserva["Regimen"] = $this->regimen;
@@ -57,11 +57,11 @@ class cookies
     $total=0;
     foreach ($this->temporada as $value) {
       if ($value == "alta") {
-        $total+=$this->reserva["Precio noche"];
-        $this->reserva["Precio total"] = $total +=20;
+        $total+=$this->reserva["Precio_noche"];
+        $this->reserva["Precio_total"] = $total +=20;
       } else {
-        $total+=$this->reserva["Precio noche"];
-        $this->reserva["Precio total"] = $total;
+        $total+=$this->reserva["Precio_noche"];
+        $this->reserva["Precio_total"] = $total;
       }
     }
   }
