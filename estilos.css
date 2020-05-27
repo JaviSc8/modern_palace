@@ -1,101 +1,117 @@
+/*-------------------------------------------------------------------------------*/
+/*ESTRUCTURA BÁSICA PÁGINA*/
 /*Relleno superior en los divs #cuerpo para que la barra de navegación no se superponga con el contenido*/
 #cuerpo{
-  padding-top: 100px;
+  padding-top: 97px;
 }
-/*Relleno en pantallas pequeñas
-@media screen and (max-width: 500px) {
-  #cuerpo{
-    padding-top: 5%;
-  }
-}*/
-#logotipo{
-  width:120px;
-  height:70px;
-}
-#logopie{
-  width:100%;
-  height:100%;
-}
+
+/*Color blanco para cuerpo por si no carga la imagen de fondo*/
 body{
   background-color: #ffffff;
 }
-/*Fondo de la página*/
+
+/*Imagen de fondo de la página, destacando la posición fija, tras los elementos y con opacidad menor a 1*/
 #fondo{
   position: fixed;
   z-index: -2;
   opacity: 0.8;
   width: 100%;
+  height: 100%;
 }
-/*Alineado para títulos y fuentes a utilizar*/
+
+/*Alineado para títulos y fuentes a utilizar en los diferentes elementos de texto*/
 h1{font-weight: bold;}
 h1, h2{text-align: center;}
-h1, h2, h3{font-family: 'Great Vibes', sans-serif; font-size: 45px;}
+h1, h2, h3{
+  font-family: 'Great Vibes', sans-serif;
+  font-size: 45px;
+}
 h4, p, li, a{font-family: 'Roboto', sans-serif;}
 p, h3, h4{text-align: justify;}
 a{color: black;}
 a:hover{text-decoration: none;}
-/*Dimensionamiento de video
-video{
-  margin-left: ;
-  margin-right: ;
-  opacity: 1;
-  width: 100%;
-  height: 65vh;
-  z-index: -1;
-}*/
-/*Frase y botón de reserva*/
-#contenido_video{
-  position: absolute;
-  background-color: #aaaaaa;
+label{font-weight: bold;}
+.form-check-label{font-weight: normal;}
+/*-------------------------------------------------------------------------------*/
+/*BARRA DE NAVEGACIÓN. (Colores y opacidad)*/
+#nav{
   opacity: 0.8;
-  color: black;
-  padding: 10px;
-  z-index: 1;
+  background-color: #aaaaaa;
 }
-/*Separación (sin uso por responsive)
-.separacion{margin-left: 1%;}*/
-/*Botón de reserva
-#reserva{margin-left: 1%;}
-#reserva:hover{}
-.boton{width: 300px;}*/
-/*Dimensionamiento de contenido video por pantallas*/
-@media screen and (min-width: 400px) {
-  #contenido_video{
-    top:68%;
-    margin-left: 20%;
-    width: 60%;
-  }
+#Navbar a:hover {color:#0275d8}
+
+/*Ancho y largo del logotipo*/
+#logotipo{
+  width:120px;
+  height:70px;
 }
-@media screen and (max-width: 400px) {
-  #contenido_video{
-    visibility: hidden;
-  }
-}
-/*Barra de navegación (Colores)*/
-#nav{opacity: 0.8;
-background-color: #aaaaaa;}
-.navbar-brand {}
-.navbar-brand:hover {}
-/*Menú de navegación de líneas y horarios (Colores)*/
+
+/*Menú de navegación (formato de fuente negrita)*/
 .nav-item .nav-link {font-weight: bold;}
 .nav-item .nav-link:hover {font-weight: bold;}
-/*Menú de navegación de enlaces interiores (Colores)*/
-.dropdown-menu a{background-color: white; color: black ; font-weight: bold;}
-.dropdown-menu a:hover {background-color:#aaaaaa ; color: black; font-weight: bold;}
-/*Enlaces con imágenes*/
-.enlaces{margin-left: auto; margin-right: auto; width: 40%;}
-.enlaceTexto{text-align: center;}
-.enlacesBlack{width: 10%;}
-/*No mostrar decoración en listas de pie de página*/
-.listadosPie{list-style-type: none;}
-/* Make the image fully responsive */
+
+/*Menú de navegación de enlaces interiores (Colores y formato de fuente de destinos)*/
+.dropdown-menu a{
+  background-color: white;
+  color: black ;
+  font-weight: bold;
+}
+.dropdown-menu a:hover {
+  background-color:#aaaaaa ;
+  color: black;
+  font-weight: bold;
+}
+
+/*-------------------------------------------------------------------------------*/
+/*CARRUSEL DE IMAGENES*/
+/*Imagen responsive para carrusel de imagenes para pantallas tipo escritorio */
 .carousel-inner img {
   width: 100%;
-  height: 65vh;
+  height: 70vh;
 }
+
+/*Imagen responsive para pantallas pequeñas y medianas*/
+@media screen and (max-width: 800px) {
+  .carousel-inner img {
+    width: 100%;
+    height: 40vh;
+  }
+}
+
+/*Ancho del carrusel*/
 #carousel {
   width: 100%;
 }
+/*-------------------------------------------------------------------------------*/
+/*PIE DE PÁGINA*/
+/*Ancho y largo del logotipo del pie de página*/
+#logopie{
+  width:100%;
+  height:100%;
+}
+
+/*Recuadro para pie de página*/
+#pie{
+  background-color: #aaaaaa;
+  opacity: 0.8;
+  border-radius: 15px;
+}
+
+/*No mostrar decoración en listas de pie de página*/
+.listadosPie{list-style-type: none;}
+
+/*-------------------------------------------------------------------------------*/
+/*OTROS*/
+/*Enlaces con imágenes (redes sociales, iconos, etc.)*/
+.enlaces{
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}
+.enlaceTexto{text-align: center;}
+.enlacesBlack{width: 10%;}
+
+/*Recuadro para destacar elementos como formularios, etc.*/
 .destacar{
   background-color: #aaaaaa;
   opacity: 0.8;
@@ -104,27 +120,23 @@ background-color: #aaaaaa;}
   padding-bottom: 35px;
   border-radius: 15px;
 }
+
+/*Recuadro blanco para mostrar resumenes principalmente de reservas*/
 .resumen{
   border: 2px solid black;
   border-radius: 15px;
   background-color: #ffffff;
 }
-#bienvenida{
+
+/*Recuadro para Mapa*/
+.map{
   width: 100%;
-  height: 65vh;
+  height: 300px;
 }
-#pie{
-  background-color: #aaaaaa;
-  opacity: 0.8;
-  border-radius: 15px;
-}
-/*Botón de solicitar precio*/
-#solicitar_precio{;}
-#solicitar_precio:hover{;}
-/*Mapa*/
-.map{ width: 100%; height: 300px; }
+
+/*-------------------------------------------------------------------------------*/
 /*EFECTOS*/
-.navEf {height:9%;}
+/*Efecto zoom para iconos redes sociales*/
 .zoom {
     -webkit-transition: all .2s ease-in-out;
     -moz-transition: all .2s ease-in-out;

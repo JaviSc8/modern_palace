@@ -24,6 +24,10 @@
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <!--Declaración Google Fonts-->
     <link href="https://fonts.googleapis.com/css?family=Great+Vibes|Roboto&display=swap" rel="stylesheet">
+    <!-- Declaración Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+   crossorigin=""/>
     <!-- Declaración CSS propio -->
     <link rel="stylesheet" type="text/css" href="../estilos.css" media="screen"/>
     <!-- Declaración favicon -->
@@ -117,34 +121,34 @@
         <div class="carousel-inner">
           <!--Elemento del carrusel: Imagen, y sus textos-->
           <div class="carousel-item active">
-            <img class="d-block w-100" src="../imagenes/malaga/malaga1.jpg" alt="Fotografía Vistas Málaga">
+            <img class="d-block w-100" src="../imagenes/paris/paris1.jpg" alt="Fotografía Louvre piramide">
             <div class="carousel-caption d-md-block">
-              <h1>Disfruta de Málaga</h1>
-              <h2 class="d-none d-md-block">Siente sus calles centenarias</h2>
+              <h1>Vive París</h1>
+              <h2 class="d-none d-md-block">Sus museos</h2>
             </div>
           </div>
           <!--Elemento del carrusel: Imagen, y sus textos-->
           <div class="carousel-item">
-            <img class="d-block w-100" src="../imagenes/malaga/malaga2.jpg" alt="Fotografía espetos/sardinas">
+            <img class="d-block w-100" src="../imagenes/paris/paris2.jpg" alt="Fotografía Vistas París">
             <div class="carousel-caption d-md-block">
-              <h1>Vive Málaga</h1>
-              <h2 class="d-none d-md-block">Deleitate con su gastronomía</h2>
+              <h1>Disfruta París</h1>
+              <h2 class="d-none d-md-block">Vive la noche parisina</h2>
             </div>
           </div>
           <!--Elemento del carrusel: Imagen, y sus textos-->
           <div class="carousel-item">
-            <img class="d-block w-100" src="../imagenes/malaga/catedral2.jpg" alt="Fotografía catedral de Málaga">
+            <img class="d-block w-100" src="../imagenes/paris/paris3.jpg" alt="Fotografía torre Eiffel">
             <div class="carousel-caption d-md-block">
-              <h1>Observa Málaga</h1>
-              <h2 class="d-none d-md-block">Admira su arquitectura</h2>
+              <h1>Sueña en París</h1>
+              <h2 class="d-none d-md-block">Sus monumentos</h2>
             </div>
           </div>
           <!--Elemento del carrusel: Imagen, y sus textos-->
           <div class="carousel-item">
-            <img class="d-block w-100" src="../imagenes/malaga/mar.jpg" alt="Fotografía del mar en Málaga">
+            <img class="d-block w-100" src="../imagenes/paris/paris4.jpg" alt="Fotografía Sena">
             <div class="carousel-caption d-md-block">
-              <h1>Sumérgete en Málaga</h1>
-              <h2 class="d-none d-md-block">Vive el mar en todo su esplendor</h2>
+              <h1>Visita París</h1>
+              <h2 class="d-none d-md-block">Camina por sus calles</h2>
             </div>
           </div>
         </div>
@@ -163,16 +167,16 @@
       <div class="container-fluid">
         <!--Nombre del hotel-->
         <div id="titulo">
-          <h3 class="text-center mb-4">Modern Palace Málaga</h3>
+          <h3 class="text-center">Modern Palace París</h3>
           <hr>
           <!--Información-->
           <div class="row info">
             <!--Información del Destino/Hotel-->
             <div class="col-12 col-md-3">
-              <h4 class="text-center">Málaga la bella  <img class="enlacesBlack" src="../imagenes/mundo.png" alt="Icono mundo"></h4>
-              <p>Disfruta de la vida en Málaga, la capital de la costa del Sol. Visita sus museos y sus actividades culturales, tomate algo en sitios
-                emblemáticos o simplemente relajate en la playa. Nuestro hotel se encuentra cerca de calle Larios, la calle principal del casco histórico por lo que tendrás acceso rápido a los lugares
-                más importantes que visitar y a gran cantidad de medios de transporte públicos que te llevaran a donde necesites.</p>
+              <h4 class="text-center">París romántica  <img class="enlacesBlack" src="../imagenes/mundo.png" alt="Icono mundo"></h4>
+              <p>Visita París, la ciudad del amor, una de las capitales más importantes y antiguas de Europa. Deleitate con sus monumentos y disfruta
+              de su gastronomía. Nuestro hotel se encuentra en el centro histórico por lo que tendrás acceso a los lugares más importantes y a gran
+            cantidad de medios de transporte públicos que te permitiran moverte por la ciudad.</p>
             </div>
             <!--Descripción del equipamiento del hotel-->
             <div class="col-12 col-md-3">
@@ -206,11 +210,11 @@
         </div>
         <hr>
         <div class="destacar info">
-          <h4>Habitación 2:</h4>
+          <h4>Habitación 1:</h4>
           <!--Formulario para reserva de habitación-->
           <form action="../controlador/control.php" method="post">
             <!--Elemento oculto para usar el destino en reservas, tiempo y mapa-->
-            <input type="hidden" id="ciudad" name="destino2" value="Malaga,ES">
+            <input type="hidden" id="ciudad" name="destino" value="Paris,FR">
             <div class="form-row justify-content-center">
               <!--Selección de fecha de entrada-->
               <div class="col-md-2 col-sm-6">
@@ -218,9 +222,7 @@
                 <input type="date" id="date1" class="form-control" name="fecha_entrada" min=<?php echo date("Y-m-d"); ?> required
                 value=<?php
                 //Para mostrar la selección hecha previamente:
-                if(isset($_COOKIE['reserva'])) {
-                  echo $a["Entrada"]." readonly";
-                }
+                if(isset($_COOKIE['reserva'])) {echo $a["Entrada"];}
                 ?>>
               </div>
               <!--Selección de fecha de salida-->
@@ -229,10 +231,7 @@
                 <input type="date" id="date2" class="form-control" name="fecha_salida" required
                 value=<?php
                 //Para mostrar la selección hecha previamente:
-                if(isset($_COOKIE['reserva'])) {
-                  echo $a["Salida"]." readonly";
-                }
-                ?>>
+                if(isset($_COOKIE['reserva'])) {echo $a["Salida"];}?>>
               </div>
               <!--Selección de nº de adultos-->
               <div class="col-md-2 col-sm-6">
@@ -243,6 +242,14 @@
                   <option class="option" value="3">3</option>
                 </select>
               </div>
+              <!--Selección de una 2ª habitación-->
+              <div class="col-md-2 col-sm-6">
+                <label for="habitacion">Añadir 2ª Habitación</label>
+                <select id="habitacion" class="form-control" name="habitacion">
+                  <option value="si">Si</option>
+                  <option value="no" selected>No</option>
+                </select>
+              </div>
               <!--Botón para enviar formulario-->
               <div class="col-md-2 col-sm-6 mt-3 align-self-end">
                 <input type="submit" class="btn btn-primary" value="Continuar">
@@ -251,7 +258,7 @@
         <hr>
       <div class="row">
         <!--Fotografía de habitación-->
-        <img class="habitaciones col-md-3 col-sm-6" src="../imagenes/habitaciones/habitacionsimple.jpg" alt="habitacion simple">
+        <img class="habitaciones col-md-3 col-sm-6" src="../imagenes//habitaciones/habitacionsimple.jpg" alt="habitacion simple">
         <!--Información de la habitación-->
         <div class="col-md-9 col-sm-6">
         <h4>Habitación Simple</h4>
@@ -264,13 +271,13 @@
               <div class="form-check">
                 <input class="form-check-input simple" type="radio" name="regimen" id="Radios1" value="simpleDesayuno">
                 <label class="form-check-label" for="Radios1">
-                  Alojamiento con Desayuno Buffet incluido. <strong>Precio por noche: 50 €*</strong>
+                  Alojamiento con Desayuno Buffet incluido. <strong>Precio por noche: 65 €*</strong>
                 </label>
               </div>
               <div class="form-check">
                 <input class="form-check-input simple" type="radio" name="regimen" id="Radios2" value="simpleMedia">
                 <label class="form-check-label" for="Radios2">
-                  Alojamiento en régimen de Media Pensión (Desayuno y Cena Buffet). <strong>Precio por noche: 80 €*</strong>
+                  Alojamiento en régimen de Media Pensión (Desayuno y Cena Buffet). <strong>Precio por noche: 95 €*</strong>
                 </label>
               </div>
         </div>
@@ -278,7 +285,7 @@
       <hr>
       <div class="row">
         <!--Fotografía de habitación-->
-        <img class="habitaciones col-md-3 col-sm-6" src="../imagenes/habitaciones/habitaciondoble.jpg" alt="habitacion doble">
+        <img class="habitaciones col-md-3 col-sm-6" src="../imagenes//habitaciones/habitaciondoble.jpg" alt="habitacion doble">
         <!--Información de la habitación-->
         <div class="col-md-9 col-sm-6">
         <h4>Habitación Doble</h4>
@@ -291,13 +298,13 @@
             <div class="form-check">
               <input class="form-check-input doble" type="radio" name="regimen" id="Radios3" value="dobleDesayuno" checked>
               <label class="form-check-label" for="Radios3">
-                Alojamiento con Desayuno Buffet incluido. <strong>Precio por noche: 120 €*</strong>
+                Alojamiento con Desayuno Buffet incluido. <strong>Precio por noche: 135 €*</strong>
               </label>
             </div>
             <div class="form-check">
               <input class="form-check-input doble" type="radio" name="regimen" id="Radios4" value="dobleMedia">
               <label class="form-check-label" for="Radios4">
-                Alojamiento en régimen de Media Pensión (Desayuno y Cena Buffet). <strong>Precio por noche: 180 €*</strong>
+                Alojamiento en régimen de Media Pensión (Desayuno y Cena Buffet). <strong>Precio por noche: 195 €*</strong>
               </label>
             </div>
         </div>
@@ -308,10 +315,10 @@
     <p class="aclaracion">* Ocupación: 1 Niño/a de hasta 14 años sin coste adicional en habitación simple y 2 niños/as en habitación doble (sofa/cama supletoria/s disponibles).
     <br>* Precio: En temporada alta (Junio a Agosto, ambos inclusive), el precio se verá incrementado 20 € por noche.</p>
     </div>
-    <hr>
-    <!-- Open Street Maps-->
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d102341.80869077441!2d-4.519306960919692!3d36.71820148344484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd7259c44fdb212d%3A0x6025dc92c9ca32cf!2zTcOhbGFnYQ!5e0!3m2!1ses!2ses!4v1585388775690!5m2!1ses!2ses"
-    width="100%" height="450" frameborder="0" style="border:0; border-radius: 15px;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+  <hr>
+  <!-- Open Street Maps-->
+  <div id="Paris" class="map">
+  </div>
     <hr>
     <!-- Pie de página con enlaces, información adicional, etc. -->
     <footer>
@@ -370,6 +377,10 @@
    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+   <!-- Leaflet's (Mapas) -->
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+      integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+      crossorigin=""></script>
    <!-- Declaraciones javascript propias -->
    <script src="../js/jQuery.js" type="text/javascript"></script>
    <script src="../js/tiempo.js" type="text/javascript"></script>

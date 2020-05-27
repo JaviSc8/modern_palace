@@ -2,10 +2,10 @@
 class db
 {
   //Atributos de conexión:
-  private $host = "127.0.0.1";
-  private $usuario = "Javier";
-  private $password = "Javier.1";
-  private $bd = "hotelespalace";
+  private $host = "localhost";
+  private $usuario = "id13600821_javier";
+  private $password = "Rivera.11.1988";
+  private $bd = "id13600821_hotelespalace";
   private $puerto = 3306;
   protected $conexion;
   //Atributos de error:

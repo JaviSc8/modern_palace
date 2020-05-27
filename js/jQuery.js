@@ -1,5 +1,4 @@
-//Si da fallo situar encima para asegurar la carga de los elementos:
-//$(document).ready(function(){
+//------------------------------------------------------------------------------
 //FECHAS. Poner como mínimo el valor de la fecha de entrada en fecha de salida haciendo uso del evento change del input:
 $("#date1").change(function() {
   var fecha = document.getElementById('date1').value;
@@ -16,22 +15,22 @@ $("#date1").change(function() {
   if (dia.length < 2){
       dia = '0' + dia;
     }
-    //Incluimos al atributo min de fecha salida:
+  //Incluimos al atributo min de fecha salida:
   $("#date2").attr({"min":anyo +"-"+mes+"-"+dia});
 });
-//----------------------------------------------------------------------
-//Nº Adultos:
-//Si se selecciona elementos tipo radio de habitación simple se incluye 1 adulto por habitación y no se permite utilizar el resto de opciones:
+//------------------------------------------------------------------------------
+//Nº ADULTOS:
+//Si se seleccionan elementos tipo radio de habitación simple, se incluye 1 adulto por habitación y no se permite utilizar el resto de opciones:
 $(".simple").change(function() {
   $("#adultos").val('1');
   $(".option").attr("disabled", true);
 });
-//Si se selecciona elementos tipo radio de habitación doble se permite utilizar el resto de opciones:
+//Si se seleccionan elementos tipo radio de habitación doble, se permite utilizar el resto de opciones:
 $(".doble").change(function() {
   $(".option").attr("disabled", false);
 });
-//----------------------------------------------------------------------
-//SESION.php: Petición AJAX asincrona para apartado Mis Reservas (Consultarlas):
+//------------------------------------------------------------------------------
+//SESION.php: Petición AJAX asincrona para apartado Mis Reservas (Mostrarlas):
 $("#IDreserva").change(function() {
   var ID = $("#IDreserva").val();
   $.ajax(
@@ -48,7 +47,7 @@ $("#IDreserva").change(function() {
     alert( "Error al obtener la reserva, intentelo en unos minutos" );
   })
 });
-//----------------------------------------------------------------------
+//------------------------------------------------------------------------------
 //SESION.php: Petición AJAX asincrona para apartado Mis Reservas (eliminar reservas):
 $("#eliminaReserva").click(function() {
   var option = confirm("Va a cancelar su reserva, ¿esta de acuerdo?");
@@ -63,67 +62,31 @@ $("#eliminaReserva").click(function() {
   })
   .done(function(data) {
     alert("Reserva cancelada");
-    //$('.nav-tabs a[href="#misreservas"]').tab('show');
 })
   .fail(function(data) {
     alert( "Error al eliminar la reserva, intentelo en unos minutos");
   })
 }
 });
-//----------------------------------------------------------------------
-//SESION.PHP: Mensaje de actualización de datos:
-$("#actualizaDatos").click(function() {
-  alert("Datos actualizados");
+//------------------------------------------------------------------------------
+//EFECTOS:
+//Subir al inicio de la página recorriendola pulsando el logo del pie utilizando animate:
+$("#logopie").on("click", function(e){
+    e.preventDefault();
+    $("html, body").animate({
+        scrollTop: 0
+    }, 1000);
 });
-//-----------------------------------------------------------------------
-//EFECTOS: Scroll barra navegación:
-/*$(window).scroll(function(){
-  if( $(this).scrollTop() > 0 ){
-    $('#nav').addClass('navEf');
-    /*$('#nav').animate({"height":"9%"},1000);*/
-  /*} else {
-    $('#nav').removeClass('navEf');
-  }
-});*/
-//Situar el raton:
-$( "#caja" ).hover(function() {
-  $("#caja").css("background-color", "#000000");
-  }, function(){
-    $("#caja").css("background-color", "#C3C3C3");
+
+//Ocultar y mostrar información del hotel/destino mediante fadeIn al hacer scroll hacia abajo:
+$(".info").hide();
+$(window).scroll(function() {
+    if ($(document).scrollTop() > 360) {
+      $(".info").fadeIn(2000);
+    }
   });
-  //Desaparecer con boton:
-    $( "#caja" ).click(function() {
-      $( "#caja" ).slideToggle( "slow" );
-    });
-    //Desaparecer sin botón:
-    function desaparecer(){
-      $( "#caja" ).slideToggle( "slow" );
-    };
-    //Añadir clase (Zoom iconos):
-    $(".zoom").hover(function(){
+
+//Añadir clase transition (Zoom iconos redes sociales):
+$(".zoom").hover(function(){
   $(this).toggleClass("transition");
-  });
-//Animación para zoom letra
-estado=0;
-$("#prueba").hover(function(){
- if (estado==0) {
-    $(this).animate({"font-size":"120%","left":"450px"},1000);
-    estado=1;
-    }
- else {
-    $(this).animate({"font-size":"100%","left":"20px"},1000);
-    estado=0;
-    }
- });
- //Animación para zoom icono
- estado=0;
- $("#icono").hover(function(){
-  if (estado==0) {
-     $(this).animate({heigth:"120%", left:"+=50"},1500);
-     estado=1;
-     }
-  else {
-     $(this).animate({heigth:"100%", left:"-=50"},1500);
-     estado=0;
-     }
   });
