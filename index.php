@@ -68,7 +68,7 @@
           </ul>
           <!--Información adicional (Teléfono, correo electrónico)-->
               <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link" href="tel:+34952004417">(+34) 952 00 44 17 </a></li>
+                <li class="nav-item"><a class="nav-link" href="tel:+34900004417">(+34) 900 00 44 17 </a></li>
                 <li class="nav-item"><a class="nav-link" href="mailto:info@modernpalace.com"> info@modernpalace.com</a></li>
               </ul>
             </div>
@@ -257,10 +257,10 @@
             <h3>Síguenos en redes sociales</h3>
             <!-- Enlaces con imagenes de redes sociales-->
             <div class="row">
-              <a class="col-md-3 col-6 enlaceTexto zoom" href="https://es-es.facebook.com/"><img class="enlaces" src="imagenes/facebook.png" alt="acceso facebook"><br>Facebook</a>
-              <a class="col-md-3 col-6 enlaceTexto zoom" href="https://www.instagram.com/"><img class="enlaces" src="imagenes/instagram.png" alt="acceso instagram"><br>Instagram</a>
-              <a class="col-md-3 col-6 enlaceTexto zoom" href="https://twitter.com/"><img class="enlaces" src="imagenes/twitter.png" alt="acceso twitter"><br>Twitter</a>
-              <a class="col-md-3 col-6 enlaceTexto zoom" href="https://es.linkedin.com/"><img class="enlaces" src="imagenes/linkedin.png" alt="acceso linkedin"><br>Linkedin</a>
+              <a class="col-md-3 col-6 enlaceTexto zoom" href="https://es-es.facebook.com/"><img class="enlaces" src="imagenes/index/facebook.png" alt="acceso facebook"><br>Facebook</a>
+              <a class="col-md-3 col-6 enlaceTexto zoom" href="https://www.instagram.com/"><img class="enlaces" src="imagenes/index/instagram.png" alt="acceso instagram"><br>Instagram</a>
+              <a class="col-md-3 col-6 enlaceTexto zoom" href="https://twitter.com/"><img class="enlaces" src="imagenes/index/twitter.png" alt="acceso twitter"><br>Twitter</a>
+              <a class="col-md-3 col-6 enlaceTexto zoom" href="https://es.linkedin.com/"><img class="enlaces" src="imagenes/index/linkedin.png" alt="acceso linkedin"><br>Linkedin</a>
             </div>
           </div>
           <hr>
@@ -277,7 +277,7 @@
                   <li>Av. Puerta del sol, 15</li>
                   <li>29602 Marbella</li>
                   <li>Málaga</li>
-                  <li><a href="tel:+34952004417">(+34) 952 00 44 17 </a></li>
+                  <li><a href="tel:+34900004417">(+34) 900 00 44 17 </a></li>
                   <li><a href="mailto:info@modernpalace.com"> info@modernpalace.com</a></li>
                   <li>Todos los derechos reservados</li>
                   <li>Designed by Javier Rivera Bellet</li>

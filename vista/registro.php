@@ -55,7 +55,7 @@ include '../controlador/avisos.php';
           </ul>
           <!--Información adicional (Teléfono, correo electrónico)-->
               <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link" href="tel:+34952004417">(+34) 952 00 44 17 </a></li>
+                <li class="nav-item"><a class="nav-link" href="tel:+34900004417">(+34) 900 00 44 17 </a></li>
                 <li class="nav-item"><a class="nav-link" href="mailto:info@modernpalace.com"> info@modernpalace.com</a></li>
               </ul>
             </div>
@@ -167,7 +167,7 @@ include '../controlador/avisos.php';
                  <li>Av. Puerta del sol, 15</li>
                  <li>29602 Marbella</li>
                  <li>Málaga</li>
-                 <li><a href="tel:+34952004417">(+34) 952 00 44 17 </a></li>
+                 <li><a href="tel:+34900004417">(+34) 900 00 44 17 </a></li>
                  <li><a href="mailto:info@modernpalace.com"> info@modernpalace.com</a></li>
                  <li>Todos los derechos reservados</li>
                  <li>Designed by Javier Rivera Bellet</li>

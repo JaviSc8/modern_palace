@@ -59,7 +59,7 @@
           </ul>
           <!--Información adicional (Teléfono, correo electrónico)-->
               <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link" href="tel:+34952004417">(+34) 952 00 44 17 </a></li>
+                <li class="nav-item"><a class="nav-link" href="tel:+34900004417">(+34) 900 00 44 17 </a></li>
                 <li class="nav-item"><a class="nav-link" href="mailto:info@modernpalace.com"> info@modernpalace.com</a></li>
               </ul>
             </div>
@@ -135,11 +135,11 @@
                     <li>Recepcionistas</li>
                     <li>Planificador/a de eventos</li>
                   </ul>
-                <p>Si deseas trabajar con nosotros, por favor contacta al número de nuestra sede en Málaga, <a href="tel:+34952004417">(+34) 952 00 44 17 </a>
+                <p>Si deseas trabajar con nosotros, por favor contacta al número de nuestra sede en Málaga, <a href="tel:+34900004417">(+34) 900 00 44 17 </a>
                    o al correo eléctronico <a href="mailto:rrhh@modernpalace.com"> rrhh@modernpalace.com.</a></p>
                    <!--Enlaces de contacto con la empresa-->
                    <ul>
-                     <li><a href="tel:+34952004417">(+34) 952 00 44 17 </a></li>
+                     <li><a href="tel:+34900004417">(+34) 900 00 44 17 </a></li>
                      <li><a href="mailto:rrhh@modernpalace.com"> rrhh@modernpalace.com</a></li>
                    </ul>
               </div>
@@ -159,7 +159,7 @@
                         <li>Av. Puerta del sol, 15</li>
                         <li>29602 Marbella</li>
                         <li>Málaga</li>
-                        <li><a href="tel:+34952004417">(+34) 952 00 44 17 </a></li>
+                        <li><a href="tel:+34900004417">(+34) 900 00 44 17 </a></li>
                         <li><a href="mailto:info@modernpalace.com"> info@modernpalace.com</a></li>
                         <li>Todos los derechos reservados</li>
                         <li>Designed by Javier Rivera Bellet</li>

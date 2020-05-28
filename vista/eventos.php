@@ -59,7 +59,7 @@
           </ul>
           <!--Información adicional (Teléfono, correo electrónico)-->
               <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link" href="tel:+34952004417">(+34) 952 00 44 17 </a></li>
+                <li class="nav-item"><a class="nav-link" href="tel:+34900004417">(+34) 900 00 44 17 </a></li>
                 <li class="nav-item"><a class="nav-link" href="mailto:info@modernpalace.com"> info@modernpalace.com</a></li>
               </ul>
             </div>
@@ -139,7 +139,7 @@
                 <p>Cualquiera de nuestros hoteles dispone de varias salas de conferencias, salón para celebraciones con un aforo máximo
                   de 200 personas y posibilidad de realizar eventos al aire libre según temporada.</p>
                 <p>Para solicitar presupuestos, por favor contacta con nosotros al número de reservas de nuestra sede en Málaga,
-                <a href="tel:+34952004417">(+34) 952 00 44 17 </a> o al correo eléctronico <a href="mailto:eventos@modernpalace.com"> eventos@modernpalace.com</a></p>
+                <a href="tel:+34900004417">(+34) 900 00 44 17 </a> o al correo eléctronico <a href="mailto:eventos@modernpalace.com"> eventos@modernpalace.com</a></p>
                 <ul>
                   <li>Salas de conferencias</li>
                   <li>Salones multiusos</li>
@@ -162,7 +162,7 @@
                         <li>Av. Puerta del sol, 15</li>
                         <li>29602 Marbella</li>
                         <li>Málaga</li>
-                        <li><a href="tel:+34952004417">(+34) 952 00 44 17 </a></li>
+                        <li><a href="tel:+34900004417">(+34) 900 00 44 17 </a></li>
                         <li><a href="mailto:info@modernpalace.com"> info@modernpalace.com</a></li>
                         <li>Todos los derechos reservados</li>
                         <li>Designed by Javier Rivera Bellet</li>
