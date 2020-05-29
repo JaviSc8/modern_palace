@@ -333,6 +333,8 @@ se comprueba disponibilidad, se completan los precios, se gestiona la solicitud 
 sesión para gestionar la reserva.*/
   if (isset($_POST["regimen"]) && !isset($_POST["destino2"])) {
     habitacion($habitacion1, "reserva", 10, 20, "");
+//Se elimina la cookie relacionada con una segunda habitación por si existiera de una visita a la web anterior:
+    eliminar("reserva2");
   }
 /*DESTINO.PHP: Segunda habitación. Se encuentra definido "destino2". En primer lugar, se obtiene el tipo de habitación seleccionada en la primera
 habitación mediante su cookie y se establecen los límites de habitación según este tipo. Se completa el contenido de la cookie de la segunda habitación
@@ -422,7 +424,7 @@ function habitacion($objCookie, $nombreCookie, $habMaxSimple, $habMaxDoble, $red
                   break;
               }
           }else{
-          //Si se marca la segunda habitación se utiliza el siguiente redireccionamiento:
+          //Si no se marca la segunda habitación, se utiliza el siguiente redireccionamiento:
           //Si el usuario ya está recordado por la cookie previa se verifica:
           if(isset($_COOKIE["datos"])){
             header('Location: control.php?rec=true');
@@ -506,7 +508,7 @@ function habitacion($objCookie, $nombreCookie, $habMaxSimple, $habMaxDoble, $red
                   break;
               }
           }else{
-            //Si se marca la segunda habitación se utiliza el siguiente redireccionamiento:
+            //Si no se marca la segunda habitación, se utiliza el siguiente redireccionamiento:
             //Si el usuario ya está recordado por la cookie previa se verifica:
           if(isset($_COOKIE["datos"])){
             header('Location: control.php?rec=true');

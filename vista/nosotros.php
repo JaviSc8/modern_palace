@@ -116,7 +116,7 @@
                 La familia quisó que el hotel fuera idéntico al que disponían en Málaga, ya que no querían que se perdiera su esencia y su forma de trabajar,
                 algo que ha sido recurrente en todos sus hoteles posteriores.</p>
                 <p>Actualmente, Modern Palace, dispone de 4 hoteles, situados en ubicaciones privilegiadas de Roma, París, Atenas y Málaga.</p>
-                <p>En la fotografía de la derecha puede verse la fachada del Modern Palace Hotel de Málaga en 2.010.</p>
+                <p>En la fotografía puede verse la fachada del Modern Palace Hotel de Málaga en 2.010.</p>
               </div>
                 <img class="col-md-4 col-sm-4" src="../imagenes/nosotros/hotel.jpg" alt="fachada hotel Málaga">
             </div>
