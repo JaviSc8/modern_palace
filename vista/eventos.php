@@ -107,7 +107,7 @@
       <div class="embed-responsive embed-responsive-21by9">
       <video class="embed-responsive-item" autoplay loop muted>
       <!--Si el video no puede mostrarse, aparece mensaje de error-->
-      <source src="../imagenes/eventos/Hotel.mp4" type="video/mp4"></source>
+      <source src="../imagenes/eventos/hotel.mp4" type="video/mp4"></source>
       Tu navegador no admite el elemento <code>video</code></video>
       </div>
           <hr>

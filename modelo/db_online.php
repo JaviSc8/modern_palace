@@ -2,10 +2,10 @@
 class db
 {
   //Atributos de conexión:
-  private $host = "localhost";
-  private $usuario = "id18480993_javier";
-  private $password = "Rivera.11.1988";
-  private $bd = "id18480993_hotelespalace";
+  private $host = "sql107.epizy.com";
+  private $usuario = "epiz_34253107";
+  private $password = "T8Qzr7PuXfIW0";
+  private $bd = "epiz_34253107_hotelespalace";
   private $puerto = 3306;
   protected $conexion;
   //Atributos de error:
